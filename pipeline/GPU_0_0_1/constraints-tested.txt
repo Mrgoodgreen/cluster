@@ -1,0 +1,9 @@
+# Versions used by the approved full sm6 run, including the serialized RF model.
+numpy==2.2.6
+scipy==1.15.3
+scikit-learn==1.7.2
+laspy==2.7.0
+hdbscan==0.8.44
+cloth-simulation-filter==1.1.7
+cupy-cuda12x==14.1.1
+cuml-cu12==26.2.0

@@ -1,0 +1,41 @@
+TLS Classify Cluster — состав поставки
+=====================================
+
+Эта папка (cluster) самодостаточна. Для установки на серверы
+передайте её целиком IT-специалисту вместе с файлом INSTALL_RU.md.
+
+Обязательное содержимое
+---------------------
+INSTALL_RU.md                 Инструкция по установке и эксплуатации
+REBUILD_PORTAINER.md          Пересборка образов в Portainer / из Git
+CONTENTS.txt                  Этот файл
+pipeline/                     Код классификации LAS (GPU 0.0.1 + CPU all-in-one)
+  classify_tls.py
+  classify_tls_all_in_one.py
+  GPU_0_0_1/
+    classify_tls_gpu_0_0_1.py
+    gpu_backend.py
+    requirements-gpu-core.txt
+    check_gpu_0_0_1.py
+    VERSION.txt
+manager/                      Management-сервис (API + исходники веб-UI)
+worker/                       Агент worker и Dockerfiles
+deploy/
+  manager/                    docker-compose.yml + .env.example для management
+  worker/                     docker-compose.yml + .env.example для GPU-worker
+
+Вспомогательное
+---------------
+smoke/                        Тестовые сценарии без GPU
+docker-compose.smoke.yml
+README.md                     Краткая справка (полная установка — в INSTALL_RU.md)
+
+Сборка Docker
+-------------
+Контекст сборки образов — эта папка (cluster/), не внешний репозиторий.
+Команды запуска — из deploy/manager и deploy/worker (см. INSTALL_RU.md).
+
+Порты
+-----
+TLS Classify management: 5357
+RAD/CS (TextureEnhancement): 5257  (не пересекается)

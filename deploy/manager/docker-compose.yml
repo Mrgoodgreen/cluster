@@ -1,0 +1,51 @@
+# TLS Classify — management service (API + web UI)
+# Run from this directory: cluster/deploy/manager
+# Web UI: http://<this-host>:5357
+
+services:
+  manager:
+    build:
+      context: ../..
+      dockerfile: manager/Dockerfile
+    image: tls-classify-manager:sm6-ui-20260909
+    container_name: tls-classify-manager
+    env_file:
+      - .env
+    ports:
+      - "${MANAGER_PORT:-5357}:5357"
+    environment:
+      DATABASE_URL: ${DATABASE_URL:-sqlite:////data/cluster.db}
+      STORAGE_ROOTS: ${STORAGE_ROOTS}
+      MANAGER_HOST: 0.0.0.0
+      MANAGER_PORT: "5357"
+      CORS_ORIGINS: ${CORS_ORIGINS:-*}
+      WORKER_LEASE_MINUTES: ${WORKER_LEASE_MINUTES:-30}
+      LOG_TEXT_MAX_CHARS: ${LOG_TEXT_MAX_CHARS:-524288}
+      SMB_HOST_1: ${SMB_HOST_1}
+      SMB_HOST_2: ${SMB_HOST_2:-}
+    volumes:
+      - manager_data:/data
+      - smb1:/${SMB_HOST_1}
+      # - smb2:/${SMB_HOST_2}
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:5357/api/health')"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 40s
+    restart: unless-stopped
+
+volumes:
+  manager_data:
+  smb1:
+    driver: local
+    driver_opts:
+      type: cifs
+      o: "username=${SMB_USER_1},password=${SMB_PASSWORD_1},uid=0,gid=0,file_mode=0777,dir_mode=0777,iocharset=utf8"
+      device: "//${SMB_HOST_1}/${SMB_SHARE_FOLDER_1}"
+  # smb2:
+  #   driver: local
+  #   driver_opts:
+  #     type: cifs
+  #     o: "username=${SMB_USER_2},password=${SMB_PASSWORD_2},uid=0,gid=0,file_mode=0777,dir_mode=0777,iocharset=utf8"
+  #     device: "//${SMB_HOST_2}/${SMB_SHARE_FOLDER_2}"

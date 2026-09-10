@@ -1,0 +1,426 @@
+{
+  "release": "sm6-ui-20260909",
+  "baseline": "/mnt/c/Users/roman/Documents/Cursor/cluster_deployed",
+  "approval": "User reviewed the full candidate and explicitly requested a deployment archive despite the recorded metric regressions.",
+  "automatic_quality_gate_passed": false,
+  "model_sha256": "bf4dbc1eeae99f9708292837d4cc921226a62ebf4adbd36f8b303fbde15ee6a5",
+  "archive_paths": "relative to cluster repository root",
+  "files": [
+    {
+      "path": "COMMIT_20260909_SM6.txt",
+      "change": "added",
+      "sha256": "2141da1c3b672a67487752726385401fa5e2c8972c29103cbde6e47fe2dcd853",
+      "deployed_sha256": null
+    },
+    {
+      "path": "UPDATE_20260909_SM6_RU.md",
+      "change": "added",
+      "sha256": "741a006f4807dce7be44893dce619bb3b61b54fb33b05d9911f60282aabffdb4",
+      "deployed_sha256": null
+    },
+    {
+      "path": "deploy/manager/docker-compose.yml",
+      "change": "modified",
+      "sha256": "0b4adebcf0276bf09150253deeb6a36a710199f25486aa5fe6db9bdc6b645b07",
+      "deployed_sha256": "7b49fa45fd957930a6b42ef84120a727dabeb7bf2788e4b8e5e0749ad0898de0"
+    },
+    {
+      "path": "deploy/worker/.env.example",
+      "change": "modified",
+      "sha256": "67c3074786a3da95658f80d5d1e335e14aff8baff54e7508edb69ebba0203585",
+      "deployed_sha256": "8591413d3440f2e6fcf81687979509a1da6970003bb9d336a9191b43d838a27e"
+    },
+    {
+      "path": "deploy/worker/docker-compose.yml",
+      "change": "modified",
+      "sha256": "5bf0a78db34b21801e684a5079d842cc258c76fe99c02624d490d0759822e82e",
+      "deployed_sha256": "64c18b13a6d1054c35cf51c404d83f7c3c32006d8574a99298da7bbe3d315791"
+    },
+    {
+      "path": "manager/app/main.py",
+      "change": "modified",
+      "sha256": "4aae2f438252c3e7c1a8fd69d30263ba8f2d20a0be6f7002ac07c74d1ea5ac75",
+      "deployed_sha256": "19ad6268a01e13054632c1652fe8964689635fbbf4fc38d86f24975cd29b0c6e"
+    },
+    {
+      "path": "manager/app/schemas.py",
+      "change": "modified",
+      "sha256": "a6607ddfeb22055006254868299638ae918a3837d4f4a6871d8c6c5b896b3b83",
+      "deployed_sha256": "bb3cc0982997b0a5e8e051a8b98a3d919d1bada091e0d81d3190d98461d276e5"
+    },
+    {
+      "path": "manager/app/services.py",
+      "change": "modified",
+      "sha256": "4942e1bff8742a4ba9c50f9d596fba625fa481c12f3b0ce65627545d775182a4",
+      "deployed_sha256": "56576770fabae903477d88eb97c945f4388786f3c437123ec0c61f300a0dc718"
+    },
+    {
+      "path": "manager/frontend/package-lock.json",
+      "change": "added",
+      "sha256": "deb1753076fb54bbe2e79eca5fc0cf0a737c01ada57836cd718866593b7389ef",
+      "deployed_sha256": null
+    },
+    {
+      "path": "manager/frontend/src/App.jsx",
+      "change": "modified",
+      "sha256": "b4b64255bc3fcfb6878a5cc3ea77375cfa08d23ec12b48187d399ed1019c60c8",
+      "deployed_sha256": "477f6dd828d8d7f2d38cda5d4610bc9b52b0e341329888401318b7833b2220be"
+    },
+    {
+      "path": "manager/frontend/src/api.js",
+      "change": "modified",
+      "sha256": "758e03f764ccf30dacef01846700d42d8db2b4d5f5c579ebaed910699f61d038",
+      "deployed_sha256": "6f5c5f7ea804f20deff0640fb6f4596350c331e3b9f67ef9229037e155d682d9"
+    },
+    {
+      "path": "manager/frontend/src/components/PathPicker.jsx",
+      "change": "modified",
+      "sha256": "53514bc16c5f91ee6b1e18734a96f2f7bae76516edb9b6f7a153e73d4371cc42",
+      "deployed_sha256": "35f6e627e65ace435ceef59cc6839136fecb0d9b6e4eeb82192f111af5762c42"
+    },
+    {
+      "path": "manager/frontend/src/components/StatusTag.jsx",
+      "change": "added",
+      "sha256": "2654e83f22ca8686aa4e2cd27db250ade9974cd09353819848e84280e67ef47f",
+      "deployed_sha256": null
+    },
+    {
+      "path": "manager/frontend/src/main.jsx",
+      "change": "modified",
+      "sha256": "8c2b72353dd2a166bf546abbce86ed4c988f79d257e148629934ff731e7f6fb1",
+      "deployed_sha256": "146e6d089bc12d03d89508eb041229bfca4d27fd1aebb35475cdc1e679df3d9a"
+    },
+    {
+      "path": "manager/frontend/src/pages/CreateTaskPage.jsx",
+      "change": "modified",
+      "sha256": "3828cb45b502213fbc3281757f62c334affb68192722c2ea4b41add6c78b9c8d",
+      "deployed_sha256": "db061c8773d98ef55d37f5815fc7746768616a3bbb152aa50e245ce6fcf24e5c"
+    },
+    {
+      "path": "manager/frontend/src/pages/TaskDetailPage.jsx",
+      "change": "modified",
+      "sha256": "a0540f7ba2b88df34ed27fc42784ae8dc1a018b06903e56a9441867ff3c005b0",
+      "deployed_sha256": "48be4e139b94c1a5b9b843212ab67c77008f704ae943244a3a20d0b31b30238b"
+    },
+    {
+      "path": "manager/frontend/src/pages/TasksPage.jsx",
+      "change": "modified",
+      "sha256": "1a99885e925f3d67eecd99e48067618d18e0e68f60b43d1e0936364cb2e7b468",
+      "deployed_sha256": "c9d24a3c895bb1451b6ce0864c7a376e1fe53db6b64638b42a2b3acf6a40e6ca"
+    },
+    {
+      "path": "manager/frontend/src/styles.css",
+      "change": "modified",
+      "sha256": "863e663928358536a8a68f307205547790d4d846c7d6611d6251cc1dd42732a9",
+      "deployed_sha256": "667a0e3c2283a39d09a63c78c2f03b0eaa5a5df193c1338ad6619937dbba1223"
+    },
+    {
+      "path": "manager/frontend/src/usePolling.js",
+      "change": "added",
+      "sha256": "e393f1fe2a0aa44a8e1b4c21c2e52c1e66b137322af073bdf9a80d6bb34b04cc",
+      "deployed_sha256": null
+    },
+    {
+      "path": "pipeline/GPU_0_0_1/classify_tls_gpu_0_0_1.py",
+      "change": "modified",
+      "sha256": "a0324eda9a3a12aab2ab98fac306feb332e2923d4cfab28651bc9bb0673e5000",
+      "deployed_sha256": "253c91fa35d560c1e636d3166d321835598271fe16ad531b49875a32c7a15c12"
+    },
+    {
+      "path": "pipeline/GPU_0_0_1/constraints-tested.txt",
+      "change": "added",
+      "sha256": "acb3ad514ac55c6d92d33596fbb2c87dd7ab91d5b8bfd1292daf5dfa04b1a95b",
+      "deployed_sha256": null
+    },
+    {
+      "path": "pipeline/GPU_0_0_1/gpu_backend.py",
+      "change": "modified",
+      "sha256": "ab69ae1efc325f821d00fa1ad0c1ed923b5d60f49d641e100a75fb664adb72db",
+      "deployed_sha256": "7289cf70cff6219ce7f0aa127a9262b8c7f2ebbad7eb93055873db0dbe4566f3"
+    },
+    {
+      "path": "pipeline/classify_tls.py",
+      "change": "modified",
+      "sha256": "0b74b974c0d163ca8e6b24c0147b9803d8042431c67fe68cd66df5561f623461",
+      "deployed_sha256": "6f142ede303745ebd0304d373aaae7a81dd0a3e33f4ac73c24b5183bc8a5795b"
+    },
+    {
+      "path": "pipeline/classify_tls_all_in_one.py",
+      "change": "modified",
+      "sha256": "03d1711c6ec04e216091c48457f6577ba05cf9b3b76222ed66178b705a177e47",
+      "deployed_sha256": "64922611f16c1ccf365676626b58cf7888af1d0012cbd75f0680be2c73bb5af7"
+    },
+    {
+      "path": "pipeline/classify_tls_rf_tiling.py",
+      "change": "added",
+      "sha256": "f978421c667b537d8c87e0486aec52582c21148a8d1d2a914f2eecd4a214e1d9",
+      "deployed_sha256": null
+    },
+    {
+      "path": "pipeline/classify_tls_tiling.py",
+      "change": "added",
+      "sha256": "c9dd474f1514c0098716d15d47e64ea6477f287db269bdd1bd5bd5486f438168",
+      "deployed_sha256": null
+    },
+    {
+      "path": "pipeline/etalon_rf_refiner.py",
+      "change": "added",
+      "sha256": "b0afb09684907df6133392b71db98b383d2d8aea2882f6973719a61e52cb3ced",
+      "deployed_sha256": null
+    },
+    {
+      "path": "pipeline/models/etalon_rf_refiner.pkl",
+      "change": "added",
+      "sha256": "326cc884eea2729216973fde3e26570510b04c5df1479deda68f5c1094492f75",
+      "deployed_sha256": null
+    },
+    {
+      "path": "pipeline/models/etalon_rf_scene_20260909.pkl",
+      "change": "added",
+      "sha256": "bf4dbc1eeae99f9708292837d4cc921226a62ebf4adbd36f8b303fbde15ee6a5",
+      "deployed_sha256": null
+    },
+    {
+      "path": "pipeline/rf_scene_context.py",
+      "change": "added",
+      "sha256": "9c52fcf39bb9dbf38256e582c6772b9940b1d01ff285775c2080f4c733972074",
+      "deployed_sha256": null
+    },
+    {
+      "path": "preview/check-preview.cjs",
+      "change": "added",
+      "sha256": "89e41bea00642f3e29a79e7e88af26d4668b04b72c19b638bfc3b141413f1380",
+      "deployed_sha256": null
+    },
+    {
+      "path": "preview/tls-cluster-preview.html",
+      "change": "added",
+      "sha256": "11ae3ba01ef827359d480fe0019c520bb9d32f3702402263be5c54413bc2f1b5",
+      "deployed_sha256": null
+    },
+    {
+      "path": "release_notes/sm6_comparison.json",
+      "change": "added",
+      "sha256": "c41031a3043ecbff0e292098fe0fc32372820e88785161a0ee548dada9cd43ed",
+      "deployed_sha256": null
+    },
+    {
+      "path": "smoke/_diag_ground.py",
+      "change": "added",
+      "sha256": "e7358b1cca29fc36be611872f7ab3440bfc051c367de714545ae9f081b837f81",
+      "deployed_sha256": null
+    },
+    {
+      "path": "smoke/_postpass_ground_clean.py",
+      "change": "added",
+      "sha256": "794162b9cd5dd505c0c1252b252230d2b126cddb20a8ce293794be251d7bf2f0",
+      "deployed_sha256": null
+    },
+    {
+      "path": "smoke/analyze_etalon.py",
+      "change": "added",
+      "sha256": "d37b90e60b9e7e5f81743413c991a9e736cbb420fc2b6870433b7e90097a3a97",
+      "deployed_sha256": null
+    },
+    {
+      "path": "smoke/apply_rf_tiled.py",
+      "change": "added",
+      "sha256": "3a169e2c9d786bc5488584aebf9d4fb2875a51fe550e89375a6c261f6d6c1410",
+      "deployed_sha256": null
+    },
+    {
+      "path": "smoke/check_frontend.cjs",
+      "change": "added",
+      "sha256": "1f85a408d432c543429fa2cd341c0a2514451c329929e057c57ed6b2c8604e70",
+      "deployed_sha256": null
+    },
+    {
+      "path": "smoke/compare_full_release.py",
+      "change": "added",
+      "sha256": "cec4b5bdb8032f7f2876be8c6bd5bd186e8e05aaa38a40f98299f4987ae1a611",
+      "deployed_sha256": null
+    },
+    {
+      "path": "smoke/eval_las_streaming.py",
+      "change": "added",
+      "sha256": "b522dbcef987e2cba89067fbb752e82b8d1fea6706e0022331b8be406ccd42d4",
+      "deployed_sha256": null
+    },
+    {
+      "path": "smoke/eval_vs_etalon.py",
+      "change": "added",
+      "sha256": "f5c6bcbcdffd11796fa73d3a77eb775ab6b8d9df6896bf3cd1a138d346260afd",
+      "deployed_sha256": null
+    },
+    {
+      "path": "smoke/prepare_sm6_crop.py",
+      "change": "added",
+      "sha256": "91475df9fc5a927e8f5b094564812e221714d9c523672a017d25c3b7da6f7dca",
+      "deployed_sha256": null
+    },
+    {
+      "path": "smoke/test_release_gate.py",
+      "change": "added",
+      "sha256": "0739aafb50082fbc4d83f2846b2c0b90526d74b7f964ada3e9994b221fb11598",
+      "deployed_sha256": null
+    },
+    {
+      "path": "smoke/test_reliability.py",
+      "change": "added",
+      "sha256": "81a85b74d9a90b62f7e826a9ad96513d3a9d5420efdee515378b8991441b2980",
+      "deployed_sha256": null
+    },
+    {
+      "path": "smoke/test_scene_context.py",
+      "change": "added",
+      "sha256": "42710eae643370c716a79856cd8245444aa4a4c529c6660cc9d615a45337444a",
+      "deployed_sha256": null
+    },
+    {
+      "path": "smoke/test_ui_api.py",
+      "change": "added",
+      "sha256": "600185ea5146d0889f59425bbc648e7a5b8abc08f3c0ed134ea3290fad93dd63",
+      "deployed_sha256": null
+    },
+    {
+      "path": "smoke/train_etalon_refiner.py",
+      "change": "added",
+      "sha256": "c07896028863c0d64c5f585b171e17723692c40d7b3111415ce4ad30f2259f50",
+      "deployed_sha256": null
+    },
+    {
+      "path": "sync_pipeline_from_repo.py",
+      "change": "modified",
+      "sha256": "6fd2b98e81751791bd63cacd8b95fc0dd7b549fd311be9786501da5ded9a102b",
+      "deployed_sha256": "e530a2d1469c98da7a5fc56e708751a73248f6ca3c710b6600b77332ae887d56"
+    },
+    {
+      "path": "worker/Dockerfile",
+      "change": "modified",
+      "sha256": "c44b287bb1548d17711ec2b37dc90d8309e53ef7fe62e272fc148e2ba03038f5",
+      "deployed_sha256": "f4a10032135f8449a39739db96a286c2b16398124a28fad0276c07bbb6c900d5"
+    },
+    {
+      "path": "worker/Dockerfile.mock",
+      "change": "modified",
+      "sha256": "d716fb80eca689004bd4c1eedf9ee2154bbaca01a562ddf9133c7b7d94c62b21",
+      "deployed_sha256": "77bb19e22786873e7db2c25753ae1af3eeaa9decbd585274abf055ae749f3d72"
+    },
+    {
+      "path": "worker/las_result.py",
+      "change": "added",
+      "sha256": "28f4af219eef85559e4e00664184a4a075ca25b3376db45cc7f8d682fbe7232a",
+      "deployed_sha256": null
+    },
+    {
+      "path": "worker/requirements.txt",
+      "change": "modified",
+      "sha256": "745ba1f4e933c669c5cf3e800e482a3edc46330dbfcfc98411615a1f3390d265",
+      "deployed_sha256": "cd69ecfec7c9ec8400fd9d9e09bc2569dea24a33c66c867d6e22daffac45f2e2"
+    },
+    {
+      "path": "worker/worker_agent.py",
+      "change": "modified",
+      "sha256": "a01eac347227697d99e04a932bb82c4962eb1015b26959d985d6e32fc49f7531",
+      "deployed_sha256": "e04f450e1bbb7bead5770aae608690b9f6180ec546751535219a1be5ff3ecf4f"
+    }
+  ],
+  "excluded_historical_documents": [
+    "PATCH_MANIFEST_20260909.json",
+    "UPDATE_RELIABILITY_20260909_RU.md",
+    "preview/GPU_TILING_REVIEW_RU.md"
+  ],
+  "new_environment_names": {
+    "FORCE_TILE": [
+      {
+        "file": "pipeline/GPU_0_0_1/classify_tls_gpu_0_0_1.py",
+        "default": "''"
+      }
+    ],
+    "HDBSCAN_BACKEND": [
+      {
+        "file": "pipeline/classify_tls_all_in_one.py",
+        "default": "''"
+      },
+      {
+        "file": "pipeline/GPU_0_0_1/classify_tls_gpu_0_0_1.py",
+        "default": "'cpu'"
+      }
+    ],
+    "MAX_POINTS_MONO": [
+      {
+        "file": "pipeline/GPU_0_0_1/classify_tls_gpu_0_0_1.py",
+        "default": "str(auto_mono_cap)"
+      }
+    ],
+    "MAX_TILE_POINTS": [
+      {
+        "file": "pipeline/GPU_0_0_1/classify_tls_gpu_0_0_1.py",
+        "default": "str(auto_leaf_cap)"
+      }
+    ],
+    "NOISE_TO": [
+      {
+        "file": "worker/worker_agent.py",
+        "default": "'7'"
+      }
+    ],
+    "RF_CONTEXT_MODE": [
+      {
+        "file": "pipeline/GPU_0_0_1/classify_tls_gpu_0_0_1.py",
+        "default": "'scene'"
+      }
+    ],
+    "RF_MAX_TILE_POINTS": [
+      {
+        "file": "pipeline/GPU_0_0_1/classify_tls_gpu_0_0_1.py",
+        "default": "'0'"
+      }
+    ],
+    "RF_OVERLAP_M": [
+      {
+        "file": "pipeline/GPU_0_0_1/classify_tls_gpu_0_0_1.py",
+        "default": "'8'"
+      }
+    ],
+    "RF_REFINER": [
+      {
+        "file": "pipeline/GPU_0_0_1/classify_tls_gpu_0_0_1.py",
+        "default": "''"
+      },
+      {
+        "file": "worker/las_result.py",
+        "default": null
+      },
+      {
+        "file": "worker/las_result.py",
+        "default": "''"
+      }
+    ],
+    "RF_TILE_M": [
+      {
+        "file": "pipeline/GPU_0_0_1/classify_tls_gpu_0_0_1.py",
+        "default": "'0'"
+      }
+    ],
+    "TILE_M": [
+      {
+        "file": "pipeline/GPU_0_0_1/classify_tls_gpu_0_0_1.py",
+        "default": "'0'"
+      }
+    ],
+    "TILE_OVERLAP_M": [
+      {
+        "file": "pipeline/GPU_0_0_1/classify_tls_gpu_0_0_1.py",
+        "default": "'15'"
+      }
+    ],
+    "TILE_WORKERS": [
+      {
+        "file": "pipeline/GPU_0_0_1/classify_tls_gpu_0_0_1.py",
+        "default": "'1'"
+      }
+    ]
+  },
+  "deleted_files": []
+}

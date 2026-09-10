@@ -1,0 +1,43 @@
+# TLS Classify — GPU worker
+# Run from this directory: cluster/deploy/worker
+
+services:
+  worker:
+    build:
+      context: ../..
+      dockerfile: worker/Dockerfile
+    image: tls-classify-worker:sm6-20260909
+    container_name: tls-classify-worker
+    env_file:
+      - .env
+    gpus: all
+    environment:
+      MANAGER_URL: ${MANAGER_URL}
+      WORKER_ID: ${WORKER_ID:-}
+      HOSTNAME: ${HOSTNAME:-}
+      WORKER_MODE: ${WORKER_MODE:-gpu}
+      CARS_TO: ${CARS_TO:-91}
+      NOISE_TO: ${NOISE_TO:-7}
+      RF_REFINER: ${RF_REFINER:-/opt/tls/pipeline/models/etalon_rf_scene_20260909.pkl}
+      RF_CONTEXT_MODE: ${RF_CONTEXT_MODE:-scene}
+      TILE_WORKERS: ${TILE_WORKERS:-1}
+      RF_MAX_TILE_POINTS: ${RF_MAX_TILE_POINTS:-0}
+      WORKER_POLL_IDLE_SEC: ${WORKER_POLL_IDLE_SEC:-5}
+    volumes:
+      - smb1:/${SMB_HOST_1}
+      # - smb2:/${SMB_HOST_2}
+    restart: unless-stopped
+
+volumes:
+  smb1:
+    driver: local
+    driver_opts:
+      type: cifs
+      o: "username=${SMB_USER_1},password=${SMB_PASSWORD_1},uid=0,gid=0,file_mode=0777,dir_mode=0777,iocharset=utf8"
+      device: "//${SMB_HOST_1}/${SMB_SHARE_FOLDER_1}"
+  # smb2:
+  #   driver: local
+  #   driver_opts:
+  #     type: cifs
+  #     o: "username=${SMB_USER_2},password=${SMB_PASSWORD_2},uid=0,gid=0,file_mode=0777,dir_mode=0777,iocharset=utf8"
+  #     device: "//${SMB_HOST_2}/${SMB_SHARE_FOLDER_2}"

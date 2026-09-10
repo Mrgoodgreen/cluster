@@ -1,0 +1,17 @@
+# Mock worker — build context = folder "cluster/"
+FROM python:3.11-slim-bookworm
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    MANAGER_URL=http://manager:5357 \
+    WORKER_MODE=mock \
+    MOCK_STEP_SEC=1
+
+WORKDIR /opt/tls/worker
+COPY worker/requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
+COPY worker/worker_agent.py ./
+COPY worker/las_result.py ./
+
+RUN mkdir -p /mnt/storage
+CMD ["python", "worker_agent.py"]

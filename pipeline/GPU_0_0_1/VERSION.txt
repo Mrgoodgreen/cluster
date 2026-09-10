@@ -1,0 +1,19 @@
+TLS Classify GPU 0.0.1
+
+Independent experimental fork based on CPU 1.0.3.
+
+Contract:
+- input classification is always discarded
+- all points are reset to class 1 before Stage A
+- cuML HDBSCAN uses centered local tiles and 0.08 m voxel centroids
+- no random HDBSCAN subsampling
+- CPU float64 geometry rules validate GPU car proposals
+- final CPU residual safety pass is enabled by default
+- CPU 1.0.3 files and release remain separate
+
+Validated runtime profile (dirty-1-4, 85.76M points, RTX 3080 Ti 12 GB):
+- CPU 1.0.3: 38.3 min
+- GPU 0.0.1: 10.9 min
+- speedup: 3.5x
+- point-wise class agreement: 99.1237%
+- manual visual review required before release approval
