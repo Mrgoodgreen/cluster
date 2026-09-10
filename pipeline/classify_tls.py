@@ -41,7 +41,7 @@ CLS_DIRTY = 11
 CLS_CAR = 66
 CLS_PED = 67
 # TerraScan / etalon Vehicle class (cars, vans)
-CLS_VEHICLE = 91
+CLS_VEHICLE = 9
 
 PRESERVE_CLASSES = {CLS_BUILDING}
 
